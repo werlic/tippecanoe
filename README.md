@@ -3,15 +3,15 @@ Tippecanoe is tool for creating vector tiles set from Geojson. Developed by Mapb
 
 ## Build
 ```
-docker build . -t tools/tippecanoe
+docker build . -t werlic/tippecanoe
 ```
-You can also change tools/tippecanoe with another name
+You can also change werlic/tippecanoe with another name
 
 ## Run example generate vector tiles
 ```
-docker run --rm -v ./data:/data tools/tippecanoe -o output/test.mbtiles /data/example.geojson
+docker run --rm -v ./data:/data werlic/tippecanoe -o output/test.mbtiles /data/example.geojson
 ```
-* Remember that tools/tippecanoe is the name of the tippecanoe image.
+* Remember that werlic/tippecanoe is the name of the tippecanoe image.
 
 ## Run with different output directory
-docker run --rm -v ./data:/data -v ./output:/output tools/tippecanoe -o /output/test.mbtiles /data/example.geojson
+docker run --rm -v ./data:/data -v ./output:/output werlic/tippecanoe -o /output/test.mbtiles /data/example.geojson
